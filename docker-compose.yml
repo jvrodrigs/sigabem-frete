@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  db:
+    build:
+      dockerfile: ./postgres.dockerfile
+      context: ./docker
+    image: sigabem-java-db
+    container_name: sigabem-db-container
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: sigabem
+    ports:
+      - "5432:5432"
+    networks:
+      - sigabem-network
+
+networks:
+  sigabem-network:
+    driver: bridge
