@@ -21,6 +21,7 @@ A imagem docker contem à seguinte configuração:
 # Requests
  - Consulta de Frete
     - URL: http://localhost:8080/frete
+    - Met. GET
     - Exemplo de Request: (JSON)
     > ```json 
     > { 
@@ -39,6 +40,7 @@ A imagem docker contem à seguinte configuração:
     > }
  - Ver Fretes Calculados:
     - URL: http://localhost:8080/frete/list
+    - Met. GET
     - Vai retornar a lista de fretes já calculados
 
 
